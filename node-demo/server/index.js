@@ -18,7 +18,7 @@ const Page = `
               </head>
               <body>
                 <span>服务端渲染出了真实DOM:  </span>
-                  <div>hello</div>
+                  ${RDom}
               </body>
             </html>
             `;
