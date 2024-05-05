@@ -25,11 +25,11 @@ app.all("*", function (req, res, next) {
 app.get("/sse", (req, res) => {
   res.set({
     "Content-Type": "text/event-stream", // 设定数据类型
-    "Cache-Control": "no-cache", // 长链接拒绝缓存
-    Conntection: "keep-alive", // 设置长链接
+    "Cache-Control": "no-cache", // 长连接拒绝缓存
+    Conntection: "keep-alive", // 设置长连接
   });
 
-  console.log("进入长链接了......");
+  console.log("进入长连接了......");
 
   setInterval(() => {
     console.log("正在持续返回数据中ing");
