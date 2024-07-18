@@ -1,10 +1,15 @@
 const Koa = require("koa");
 const app = new Koa();
+const authMiddleWare = require("./authMiddleware");
+const logMiddlewate = require("./logMiddleware");
 
 // app.use((ctx, next) => {
 //   ctx.response.body = "hello, I am jiaxin";
 //   console.log(ctx);
 // });
+
+app.use(authMiddleWare());
+app.use(logMiddlewate());
 
 app.use(async (ctx, next) => {
   console.log("111, then do something");
